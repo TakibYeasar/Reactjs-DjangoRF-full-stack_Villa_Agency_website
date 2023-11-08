@@ -1,0 +1,110 @@
+@import "../../styles/sass/variables";
+
+.propertydetails_sec {
+    .single-property {
+        padding: 5rem 0;
+
+        .main-image img {
+            float: none;
+        }
+
+        .main-content {
+            span.category {
+                background-color: $secondary-color;
+                font-weight: 500;
+                border-radius: 5px;
+                font-size: 14px;
+                color: $font-color;
+                padding: 5px 12px;
+                display: inline-block;
+                margin-top: 40px;
+            }
+
+            h4 {
+                font-size: 25px;
+                margin-top: 25px;
+                margin-bottom: 40px;
+                padding-bottom: 40px;
+                border-bottom: 1px solid $font-light;
+
+
+            }
+        }
+
+        .accordion {
+            margin-top: 60px;
+            margin-left: 0px;
+            margin-right: 0px;
+            border: none !important;
+
+            .accordion-header {
+                border-bottom: 1px solid $font-light;
+            }
+
+            .accordion-button {
+                box-shadow: none;
+                font-size: 17px;
+                font-weight: 500;
+                color: $font-color;
+
+                &:not(.collapsed) {
+                    color: $primary-color;
+                    background-color: $font-light;
+                    outline: none;
+                }
+
+                &::after {
+                    display: none;
+                }
+            }
+        }
+
+        .info-table {
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px $font-color;
+            padding: 35px 30px;
+            margin-left: 60px;
+
+            ul li {
+                display: block;
+                margin-bottom: 35px;
+                padding-bottom: 35px;
+                border-bottom: 1px solid $font-light;
+
+                &:last-child {
+                    border-bottom: none;
+                    padding-bottom: 0;
+                    margin-bottom: 0;
+                }
+
+                img {
+                    float: left;
+                    margin-right: 25px;
+                }
+
+                h4 {
+                    font-size: 22px;
+                    font-weight: 600;
+
+                    span {
+                        font-size: 15px;
+                        color: $bg-grey;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+
+
+        @media only screen and (max-width: 991px) {}
+    
+        @media only screen and (max-width: 768px) {}
+    
+        @media only screen and (max-width: 568px) {}
+    
+        @media only screen and (max-width: 460px) {}
+    
+        @media only screen and (max-width: 330px) {}
+
+}

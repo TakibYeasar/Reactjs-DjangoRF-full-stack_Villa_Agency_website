@@ -1,0 +1,162 @@
+@import "../../styles/sass/variables";
+
+.bestdeal_sec {
+
+    background-color: $bg-light;
+    padding: 100px 0px;
+
+    .section-heading {
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-bottom: 60px;
+        }
+
+    .nav-wrapper {
+            .nav-tabs {
+                list-style: none;
+                    text-align: center;
+                    margin-bottom: 70px;
+                
+                    .nav-item {
+                        display: inline-block;
+                        margin: 5px 8px;
+                    }
+            }
+        }
+
+    .tab-content {
+        padding: 0px;
+        background-color: transparent;
+
+        h4 {
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        .nav-link {
+            font-size: 16px;
+            font-weight: 500;
+            background-color: $font-color !important;
+            border-radius: 5px;
+            height: 50px;
+            line-height: 50px;
+            display: inline-block;
+            padding: 0px 25px;
+            color: $font-light;
+
+            &:active {
+                background-color: $primary-color !important;
+                color: $font-light;
+            }
+        }
+
+        ul.nav-tabs {
+            border-bottom: none !important;
+            margin-bottom: 80px;
+            align-items: end;
+            justify-content: end;
+            margin-top: -130px;
+
+            li {
+                padding-right: 0px;
+                border-right: none;
+                margin-left: 20px;
+            }
+        }
+
+        .info-table {
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px $font-color;
+            padding: 35px 30px;
+
+            ul li {
+                display: block;
+                margin-bottom: 24px;
+                padding-bottom: 24px;
+                border-bottom: 1px solid $font-light;
+                text-align: left;
+                font-size: 15px;
+                color: $bg-grey;
+                font-weight: 400;
+
+                &:last-child {
+                    border-bottom: none;
+                    padding-bottom: 0;
+                    margin-bottom: 0;
+                }
+
+                span {
+                    font-size: 20px;
+                    color: $font-color;
+                    font-weight: 700;
+                    display: inline-block;
+                }
+            }
+        }
+
+        .image {
+            padding: 0px 45px;
+        }
+
+        .icon-button {
+            a {
+                    background-color: $bg-dark;
+                    color: $font-light;
+                    font-size: 16px;
+                    font-weight: 400;
+                    text-transform: none;
+                    border-radius: 20px;
+                    text-decoration: none;
+                    padding: 0.5rem;
+
+                    &:hover {
+                            color: $primary-color;
+                        }
+            
+                    .icon {
+                        background-color: $primary-color;
+                        display: inline-block;
+                        width: 40px;
+                        height: 40px;
+                        text-align: center;
+                        line-height: 40px;
+                        margin-right: 10px;
+                        border-radius: 50%;
+                        margin-left: -1px;
+                        padding: 0.5rem;
+                    }
+                }
+            
+                
+        }
+    }
+
+        @media only screen and (max-width: 991px) {
+            .section-heading {
+                text-align: center;
+            }
+
+            .nav-wrapper {
+                align-items: center;
+                justify-content: center;
+            }
+
+            .tab-content {
+                .image {
+                    height: 60vh;
+                    width: 100vw;
+                    margin: 5rem 0;
+                }
+            }
+        }
+    
+        @media only screen and (max-width: 768px) {}
+    
+        @media only screen and (max-width: 568px) {}
+    
+        @media only screen and (max-width: 460px) {}
+    
+        @media only screen and (max-width: 330px) {}
+
+}

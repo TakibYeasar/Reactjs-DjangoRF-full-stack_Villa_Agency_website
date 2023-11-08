@@ -1,0 +1,148 @@
+@import "../../styles/sass/variables";
+
+.vedioview_sec {
+    padding: 5rem 0;
+    position: relative;
+
+    .vedio-image {
+        position: relative;
+
+        .back_image {
+            height: 60vh;
+            width: 100vw;
+
+        }
+
+        .section-heading {
+            position: absolute;
+            top: 10vh;
+            left: 35vw;
+
+            .main-title {
+                color: $font-light;
+            }
+        }
+    }
+
+
+    .video-content {
+        transform: translateY(-50%);
+
+        .video-frame {
+            position: relative;
+            box-shadow: 0px 0px 15px $font-color;
+            border-radius: 10px;
+
+            a {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-26px, -26px);
+                width: 52px;
+                height: 52px;
+                background-color: $font-light;
+                border-radius: 50%;
+                display: inline-block;
+                text-align: center;
+                line-height: 52px;
+                color: $primary-color;
+                outline: 15px solid $secondary-color;
+                font-size: 18px;
+            }
+
+            .image {
+                border-radius: 10px;
+            }
+        }
+    }
+
+
+
+    .fun-facts {
+        text-align: center;
+        padding-top: 0;
+
+        .counter {
+            background-color: $secondary-color;
+            position: relative;
+            border-radius: 10px;
+            width: 270px;
+            padding: 20px 0px;
+            display: inline-block;
+
+            h2,
+            p {
+                display: inline-flex;
+                vertical-align: middle;
+            }
+
+            p {
+                text-align: left;
+                font-size: 16px;
+                color: $font-color;
+                font-weight: 600;
+                line-height: 28px;
+            }
+
+            h2 {
+                margin-right: 25px;
+                font-size: 40px;
+                color: $primary-color
+            }
+
+            &::after {
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                background-color: $primary-color;
+                border-radius: 50%;
+                content: '';
+                right: -25px;
+                top: -25px;
+            }
+        }
+    }
+
+
+    @media only screen and (max-width: 991px) {
+        .vedio-image {
+
+            .section-heading {
+                position: absolute;
+                top: 10vh;
+                left: 15%;
+            }
+        }
+
+        .fun-facts {
+            .counter {
+                margin: 1rem 0;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        .video-content {
+                .video-frame {
+                    .image {
+                        height: 50vh;
+                    }
+                }
+            }
+    }
+
+    @media only screen and (max-width: 568px) {
+        .video-content {
+                .video-frame {
+                    .image {
+                        height: 40vh;
+                    }
+                }
+            }
+    }
+
+    @media only screen and (max-width: 460px) {}
+
+    @media only screen and (max-width: 330px) {}
+
+}

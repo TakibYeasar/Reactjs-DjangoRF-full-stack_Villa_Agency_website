@@ -1,0 +1,65 @@
+@import "../../styles/sass/variables";
+
+.singleproperty_sec {
+    .properties-items {
+            .item {
+                background-color: $card-bg;
+                border-radius: 10px;
+                padding: 30px;
+                margin-bottom: 30px;
+    
+                a {
+                    border-radius: 10px;
+                }
+    
+                .category {
+                    background-color: $secondary-color;
+                    font-weight: 500;
+                    border-radius: 5px;
+                    font-size: 14px;
+                    color: $font-color;
+                    padding: 5px 12px;
+                    display: inline-block;
+                    margin-top: 25px;
+                }
+    
+                h4 {
+                    font-size: 19px;
+                    margin: 25px 0px;
+    
+                    a {
+                        color: $font-color;
+                        text-decoration: none;
+                        font-size: 1.2rem;
+                    }
+                }
+    
+                ul {
+                    border-bottom: 1px solid $secondary-color;
+                    margin-bottom: 30px;
+                    padding-bottom: 30px;
+    
+                    li {
+                        display: inline-block;
+                        font-size: 15px;
+                        color: #4a4a4a;
+                        margin-right: 20px;
+    
+                        span {
+                            font-weight: 600;
+                            color: $font-color;
+                        }
+                    }
+                }
+    
+                h6 {
+                    font-size: 20px;
+                    color: $primary-color;
+                    margin-top: 6px;
+                    display: inline-block;
+                    margin-top: 30px;
+                }
+    
+            }
+        }
+}

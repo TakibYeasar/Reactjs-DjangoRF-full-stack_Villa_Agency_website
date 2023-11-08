@@ -1,0 +1,95 @@
+@import "../../styles/sass/variables";
+
+.footer_sec {
+    background-color: $bg-dark;
+    min-height: 100px;
+    padding: 1rem 0;
+    border-bottom: 1px solid $bg-grey;
+
+    .contact-section {
+        ul.info {
+            list-style: none;
+
+            li {
+                font-size: 14px;
+                color: $bg-grey;
+                border-right: 1px solid $font-light;
+                margin-right: 25px;
+                padding-right: 25px;
+
+                &:last-child {
+                    margin-right: 0px;
+                    padding-right: 0px;
+                    border-right: none;
+                }
+
+                .icon {
+                    font-size: 20px;
+                    color: $primary-color;
+                    margin-right: 8px;
+                }
+            }
+        }
+
+        ul.social-links {
+            text-align: right;
+            list-style: none;
+
+            li {
+                margin-left: 8px;
+                display: inline-block;
+
+                a {
+                    display: inline-block;
+                    width: 30px;
+                    height: 30px;
+                    background-color: $bg-grey;
+                    border-radius: 50%;
+                    text-align: center;
+                    line-height: 30px;
+                    color: $font-light;
+                    font-size: 14px;
+                    transition: all .3s;
+
+                    &:hover {
+                        background-color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .copyright {
+        p {
+            text-align: center;
+            line-height: 100px;
+            color: $font-light;
+            font-size: 16px;
+            font-weight: 400;
+
+            a {
+                color: $font-light;
+                transition: all .3s;
+                position: relative;
+                z-index: 3;
+
+                &:hover {
+                    opacity: 0.75;
+                }
+            }
+        }
+    }
+
+
+    @media only screen and (max-width: 991px) {}
+
+    @media only screen and (max-width: 768px) {}
+
+    @media only screen and (max-width: 568px) {
+    }
+
+    @media only screen and (max-width: 460px) {}
+
+    @media only screen and (max-width: 330px) {}
+}

@@ -1,0 +1,98 @@
+@import "../../styles/sass/variables";
+
+.banner_sec {
+    .main-banner {
+        position: relative;
+        .banner-item {
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 0;
+            margin-top: 0px;
+
+            .banner-image {
+                height: 100vh;
+                width: 100vw;
+                position: relative;
+            }
+
+            .header-text {
+                padding-left: 25vw;
+                position: absolute;
+                top: 35vh;
+
+                span.location {
+                        background-color: $bg-light;
+                        display: flex;
+                        color: #1e1e1e;
+                        font-size: 16px;
+                        font-weight: 500;
+                        text-transform: capitalize;
+                        padding: 6px 15px;
+                        display: inline-block;
+                        margin-bottom: 30px;
+                    }
+                
+                    h2 {
+                        font-size: 62px;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        color: $font-light;
+                        line-height: 72px;
+                        width: 50%;
+                        margin-bottom: 0px;
+                    }
+            }
+        }
+
+                .button {
+                    text-align: center;
+                    cursor: pointer;
+        
+                    .prev_button {
+                        position: absolute;
+                        top: 50%;
+                        left: 2rem;
+                        transform: translateY(-50%);
+        
+                        .icon {
+                            font-size: 3rem;
+                            border: 2px solid $bg-grey;
+                            border-radius: $border-radius-full;
+                        }
+                    }
+        
+                    .next_button {
+                        position: absolute;
+                        top: 50%;
+                        right: 2rem;
+                        transform: translateY(-50%);
+        
+                        .icon {
+                            font-size: 3rem;
+                            border: 2px solid $bg-grey;
+                            border-radius: $border-radius-full;
+                        }
+                    }
+                }
+    }
+    
+        @media only screen and (max-width: 568px) {
+            .main-banner {
+                    .banner-item {
+            
+                        .header-text {
+                            padding-left: 25vw;
+                            position: absolute;
+                            top: 35vh;
+            
+                            h2 {
+                                font-size: 50px;
+                                line-height: 60px;
+                            }
+                        }
+                    }
+                }
+        }
+
+}
