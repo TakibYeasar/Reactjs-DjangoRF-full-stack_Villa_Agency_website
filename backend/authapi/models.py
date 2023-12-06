@@ -68,13 +68,13 @@ class CustomUser(AbstractBaseUser):
         "Does the user have permissions to view the app `app_label`?"
         # Simplest possible answer: Yes, always
         return True
-    
+
     def tokens(self):
         return {
             'refresh': str(tokens.RefreshToken.for_user(self)),
             'access': str(tokens.RefreshToken.for_user(self).access_token)
         }
-    
+
     @property
     def full_name(self):
         return f"{self.first_name} {self.last_name}"
@@ -84,7 +84,3 @@ class CustomUser(AbstractBaseUser):
         "Is the user a member of staff?"
         # Simplest possible answer: All admins are staff
         return self.is_admin
-
-    
-    
-    

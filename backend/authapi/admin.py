@@ -2,6 +2,7 @@ from django.contrib import admin
 from .models import *
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 
+
 class CustomUserAdmin(BaseUserAdmin):
     # The fields to be used in displaying the User model.
     # These override the definitions on the base UserAdmin
@@ -27,6 +28,7 @@ class CustomUserAdmin(BaseUserAdmin):
     search_fields = ["email"]
     ordering = ["email", "id"]
     filter_horizontal = []
+
 
 admin.site.register(
     CustomUser,

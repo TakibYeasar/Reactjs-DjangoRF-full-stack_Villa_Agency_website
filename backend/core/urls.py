@@ -10,6 +10,6 @@ urlpatterns = [
     path('cat/<int:pk>/properties/', CategoryPropertyView.as_view()),
     path('featured/', FeaturedView.as_view()),
     path('vedioview/', VedioviewView.as_view()),
-    # path('bestdeal/', BestdealView.as_view()),
+    path('bestdeal/', BestdealView.as_view()),
     path('contact/', ContactView.as_view()),
 ]

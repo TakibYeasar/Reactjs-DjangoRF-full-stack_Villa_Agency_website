@@ -13,66 +13,71 @@ from django.core.mail import send_mail
 class ContactInfoView(APIView):
     def get(self, request):
         info_obj = ContactInfo.objects.all()
-        info_serializers = ContactInfoSerializer(info_obj, many=True, context={'request':request}).data
+        info_serializers = ContactInfoSerializer(
+            info_obj, many=True, context={'request': request}).data
         return Response(info_serializers)
 
 
 class BannerView(APIView):
     def get(self, request):
         banner_obj = Banner.objects.all()
-        banner_serializers = BannerSerializer(banner_obj, many=True, context={'request':request}).data
+        banner_serializers = BannerSerializer(
+            banner_obj, many=True, context={'request': request}).data
         return Response(banner_serializers)
 
 
 class PropertyCategoryView(APIView):
     def get(self, request):
         category_obj = PropertyCategory.objects.all()
-        category_serializers = PropertyCategorySerializer(category_obj, many=True, context={'request':request}).data
+        category_serializers = PropertyCategorySerializer(
+            category_obj, many=True, context={'request': request}).data
         return Response(category_serializers)
 
 
 class PropertyView(APIView):
     def get(self, request):
         property_obj = Property.objects.all()
-        property_serializers = PropertySerializer(property_obj, many=True, context={'request':request}).data
+        property_serializers = PropertySerializer(
+            property_obj, many=True, context={'request': request}).data
         return Response(property_serializers)
-
 
 
 class CategoryPropertyView(APIView):
     def get(self, request, pk):
         category_obj = PropertyCategory.objects.filter(id=pk)
-        category_serializer = PropertyCategorySerializer(category_obj, context={'request':request}, many=True).data
+        category_serializer = PropertyCategorySerializer(
+            category_obj, context={'request': request}, many=True).data
         data = []
         for cata in category_serializer:
             property_obj = Property.objects.filter(category=cata['id'])
-            cata['property'] = PropertySerializer(property_obj, context={'request':request}, many=True).data
+            cata['property'] = PropertySerializer(
+                property_obj, context={'request': request}, many=True).data
             data.append(cata)
         return Response(data)
-
 
 
 class FeaturedView(APIView):
     def get(self, request):
         featured_obj = Featured.objects.all()
-        featured_serializers = FeaturedSerializer(featured_obj, many=True, context={'request':request}).data
+        featured_serializers = FeaturedSerializer(
+            featured_obj, many=True, context={'request': request}).data
         return Response(featured_serializers)
 
 
 class VedioviewView(APIView):
     def get(self, request):
         vedio_obj = VedioView.objects.all()
-        vedio_serializers = VedioViewSerializer(vedio_obj, many=True, context={'request':request}).data
+        vedio_serializers = VedioViewSerializer(
+            vedio_obj, many=True, context={'request': request}).data
         return Response(vedio_serializers)
-
 
 
 class BestdealView(APIView):
     def get(self, request):
         bestdeal_obj = Bestdeal.objects.all()
-        bestdeal_serializers = BestdealSerializer(bestdeal_obj, many=True, context={'request':request}).data
+        bestdeal_serializers = BestdealSerializer(
+            bestdeal_obj, many=True, context={'request': request}).data
         return Response(bestdeal_serializers)
-
 
 
 class ContactView(APIView):
@@ -101,6 +106,3 @@ class ContactView(APIView):
 
         except:
             return Response({'error': 'Message failed to send'})
-
-
-
